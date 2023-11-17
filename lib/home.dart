@@ -1,3 +1,4 @@
+import 'package:bloc1/page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -76,7 +77,11 @@ class Home extends StatelessWidget {
                       ),
                       onPressed: (){
 
-                        context.read<SumBloc>().add(NewSum());
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PageLast(),
+                        )
+                        );
                       },
                       child: const Text('Página'),
                     )
